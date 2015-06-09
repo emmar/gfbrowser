@@ -12,6 +12,6 @@ int main(int argc, char** argv) {
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     view.showFullScreen();
     // Open a url.
-    view.setUrl(QUrl("http://google.com"));
+    view.setUrl(QUrl("http://helloracer.com/webgl"));
     return app.exec();
 }
