@@ -1,3 +1,4 @@
+QT += gui
 QT += webkit
 QT += widgets
 TEMPLATE = app
