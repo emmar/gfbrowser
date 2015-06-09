@@ -1,5 +1,5 @@
 
-    QT += webkit
+    QT += webkitwidgets
     QT += opengl
 
 TARGET      = gfbrowser
