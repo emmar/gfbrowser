@@ -1,3 +1,3 @@
 QT += webkit
-QT += QtWidgets
+QT += widgets
 SOURCES = gfbrowser.cpp
