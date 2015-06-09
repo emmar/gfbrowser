@@ -1,9 +1,9 @@
 #include <QtGui/QApplication>
 //#include <QtGui>
-#include <QtWebKit>
-#include <QWebView>
-#include <QWebFrame>
-#include <QtWidgets>
+//#include <QtWebKit>
+//#include <QWebView>
+//#include <QWebFrame>
+//#include <QtWidgets>
 
 
 int main(int argc, char** argv) {
