@@ -1,8 +1,7 @@
 TEMPLATE = app
 DEFINES += QT_QPA_EGLFS_HIDECURSOR QT_BUILD_WITH_OPENGL
 contains(QT_MAJOR_VERSION, 5) {
-    QT += gui core webkit widgets
-    QT += webkitwidgets
+    QT += webkit
 
     qtHaveModule(quick):qtHaveModule(qml) {
         QT += qml quick
