@@ -1,7 +1,7 @@
 #include <QApplication>
 //#include <QtGui>
 //#include <QtWebKit>
-//#include <QWebView>
+#include <QWebView>
 //#include <QWebFrame>
 //#include <QtWidgets>
 
