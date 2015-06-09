@@ -1,7 +1,9 @@
 #include <QApplication>
-#include <QWebView>
 #include <QtGui>
 #include <QtWebKit>
+#include <QWebView>
+#include <QWebFrame>
+
 
 int main(int argc, char** argv) {
     QApplication app(argc, argv);
