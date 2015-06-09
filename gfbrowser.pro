@@ -1,4 +1,4 @@
 QT += webkit
-TEMPLATE += app
+TEMPLATE = app
 TARGET      = gfbrowser
 SOURCES = gfbrowser.cpp
