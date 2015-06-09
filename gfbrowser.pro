@@ -1,7 +1,4 @@
-
-QT += widgets
-QT += webkitwidgets
-
 TEMPLATE = app
+QT += webkit
 TARGET      = gfbrowser
 SOURCES = gfbrowser.cpp
