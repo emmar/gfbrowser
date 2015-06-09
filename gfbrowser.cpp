@@ -2,7 +2,7 @@
 //#include <QtGui>
 //#include <QtWebKit>
 #include <QWebView>
-//#include <QWebFrame>
+#include <QWebFrame>
 //#include <QtWidgets>
 
 
