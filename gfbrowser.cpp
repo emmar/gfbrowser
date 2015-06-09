@@ -3,8 +3,8 @@
 #include <QtWebKit>
 
 int main(int argc, char** argv) {
-    QApplication::setOverrideCursor(Qt::BlankCursor);
     QApplication app(argc, argv);
+    QApplication::setOverrideCursor(Qt::BlankCursor);
     QWebView view;
     view.page()->mainFrame()->setScrollBarPolicy( Qt::Vertical, Qt::ScrollBarAlwaysOff );
     view.page()->mainFrame()->setScrollBarPolicy( Qt::Horizontal, Qt::ScrollBarAlwaysOff );
