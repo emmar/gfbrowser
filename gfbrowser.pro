@@ -1,5 +1,5 @@
 QT += webkit
-QT += gui declarative
+QT += gui
 TEMPLATE = app
 TARGET      = gfbrowser
 SOURCES = gfbrowser.cpp
