@@ -1,3 +1,4 @@
+message (QT)
 
     QT += webkitwidgets
     QT += opengl
