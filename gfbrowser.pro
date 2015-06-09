@@ -1,5 +1,5 @@
 TEMPLATE = app
 QT += webkit
-QT += gui
+QT += opengl
 TARGET      = gfbrowser
 SOURCES = gfbrowser.cpp
