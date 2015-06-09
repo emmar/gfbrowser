@@ -1,4 +1,5 @@
-message (QT)
+message ($${QT})
+message ('version: ' $$[QT_VERSION])
 
     QT += webkit
     QT += opengl
