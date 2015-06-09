@@ -1,4 +1,5 @@
 #include <QApplication>
+#include <QWebView>
 #include <QtGui>
 #include <QtWebKit>
 
