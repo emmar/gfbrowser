@@ -1,6 +1,6 @@
 message (QT)
 
-    QT += webkitwidgets
+    QT += webkit
     QT += opengl
 
 TARGET      = gfbrowser
