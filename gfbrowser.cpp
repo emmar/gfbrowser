@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     QApplication app(argc, argv);
     // Hide the cursor (it still exists).
     QApplication::setOverrideCursor(Qt::BlankCursor);
-    QWebView *view = new QWebView(parent);
+    QWebView *view = new QWebView(app);
     //QWebView view;
     // Disable scrollbars.
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
