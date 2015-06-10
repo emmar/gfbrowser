@@ -1,2 +1,4 @@
 # gfbrowser
 OpenGL enabled Full Screen (eglfs) browser built with qtwebkitwidgets.
+
+Basic web screen, can run with other backends but the goal is to be run using a EGL backend.  Build using buildroot and the gfbrowser package.  When compiling with QT5 enable eglfs and opengl support in buildroot-052015.  EGL backend needs to be  available either by MESA3d, rpi-userland, etc.
