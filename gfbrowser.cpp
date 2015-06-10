@@ -1,17 +1,22 @@
 #include <QApplication>
 #include <QWebView>
 #include <QWebFrame>
+#include <QString>
 
 int main(int argc, char** argv) {
     QApplication app(argc, argv);
+    QString url;
+    QWebView view;
+    // Read first application argument as url.
+    if (1 < app.arguments().count()) {url = app.arguments().at(1);}
+    else {url = "http://localhost";}
     // Hide the cursor (it still exists).
     QApplication::setOverrideCursor(Qt::BlankCursor);
-    QWebView view;
     // Disable scrollbars.
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     view.showFullScreen();
     // Open a url.
-    view.setUrl(QUrl("http://helloracer.com/webgl"));
+    view.setUrl(QUrl(url));
     return app.exec();
 }
