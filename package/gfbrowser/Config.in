@@ -1,0 +1,19 @@
+config BR2_PACKAGE_GFBROWSER
+        bool "gfbrowser"
+
+        depends on BR2_PACKAGE_QT5
+        select BR2_PACKAGE_QT5BASE_GUI
+        select BR2_PACKAGE_QT5BASE_WIDGETS
+        select BR2_PACKAGE_QT5WEBKIT
+        depends on !BR2_STATIC_LIBS # qt5webkit
+        depends on BR2_PACKAGE_QT5_JSCORE_AVAILABLE # qt5webkit
+        depends on BR2_ARCH_HAS_ATOMICS # qt5webkit
+        depends on !BR2_BINFMT_FLAT # qt5webkit
+        help
+          Basic web browser
+          http://mmcgo.com
+
+comment "gfbrowser needs qtwebkit or qt5webkit"
+        depends on !BR2_PACKAGE_QT_WEBKIT
+        depends on !BR2_PACKAGE_QT5WEBKIT
+
