@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
 
     QGraphicsView view(&scene);
- QGraphicsView::fitInView;
+ 
     // Disable scrollbars.
 
     //view.setFrameShape(QFrame::NoFrame);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // Set full screen.
     view.showFullScreen();
     QGraphicsWebView graphicsView;
-
+QGraphicsWebView::fitInView;
     //graphicsView.resize(width, height);
 //graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
