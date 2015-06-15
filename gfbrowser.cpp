@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     if (1 < app.arguments().count()) {url = app.arguments().at(1);}
     else {url = "http://localhost";}
     // Hide the cursor (it still exists).
-    QApplication::setOverrideCursor(Qt::BlankCursor);
+    //QApplication::setOverrideCursor(Qt::BlankCursor);
 
     const int width = 1900;
     const int height = 1000;
