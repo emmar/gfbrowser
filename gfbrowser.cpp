@@ -13,6 +13,8 @@ int main(int argc, char** argv) {
     // Read first application argument as url.
     if (1 < app.arguments().count()) {url = app.arguments().at(1);}
     else {url = "http://localhost";}
+    // Open a url.
+    webView->load(QUrl(url));
     // Hide the cursor (it still exists).
     QApplication::setOverrideCursor(Qt::BlankCursor);
     // Disable scrollbars.
@@ -20,7 +22,5 @@ int main(int argc, char** argv) {
     //webView.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     // Set full screen.
     view.showFullScreen();
-    // Open a url.
-    webView->load(QUrl(url));
     return app.exec();
 }
