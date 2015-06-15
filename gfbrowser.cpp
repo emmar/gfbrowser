@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
     //view.resize(width, height);
 
     //view.show();
+    webContent.showFullScreen();
 
     return app.exec();
 }
