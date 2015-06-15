@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
     QGraphicsWebView webView;
     scene.addItem(&webView);
     // Reccommended - http://blog.qt.io/blog/2010/05/17/qtwebkit-now-accelerates-css-animations-3d-transforms
-    view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
-    view.setViewport(new QGLWidget);
+    //view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
+    //view.setViewport(new QGLWidget);
     // Load url.
     webView.load(QUrl(url));
     view.showFullScreen();
