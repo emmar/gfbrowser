@@ -20,15 +20,16 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
 
     QGraphicsView view(&scene);
-    // Set full screen.
-    view.showFullScreen();
+
     // Disable scrollbars.
+
     view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     view.setViewport(new QGLWidget);
-
+    view.showFullScreen();
+    // Set full screen.
     QGraphicsWebView graphicsView;
 
     //graphicsView.resize(width, height);
