@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // Set full screen.
     view.showFullScreen();
     QGraphicsWebView graphicsView;
-view::fitInView();
+QGraphicsWebView::fitInView();
     //graphicsView.resize(width, height);
 //graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
