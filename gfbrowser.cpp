@@ -2,6 +2,7 @@
 #include <QGraphicsView>
 #include <QGraphicsWebView>
 #include <QString>
+#include <QGLWidget>
 
 int main(int argc, char *argv[])
 {
@@ -17,8 +18,8 @@ int main(int argc, char *argv[])
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     QGraphicsWebView graphicsView;
-graphicsView.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
-graphicsView.setViewport(new QGLWidget);
+graphicsView->setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
+graphicsView->setViewport(new QGLWidget);
     graphicsView.resize(width, height);
     graphicsView.load(QUrl("http://codepen.io/paulirish/pen/LsxyF"));
 
