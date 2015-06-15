@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // bugfix for QGraphicsWebView
     webView.resize(app.desktop()->screenGeometry().size());
     // Disable scrollbars of webView.
-    QWebFrame* frame = webView->page()->mainFrame();
+    QWebFrame* frame = webView.page()->mainFrame();
     frame->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
     frame->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
 
