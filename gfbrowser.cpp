@@ -21,6 +21,6 @@ int main(int argc, char** argv) {
     // Set full screen.
     view.showFullScreen();
     // Open a url.
-    webView=>load(QUrl(url));
+    webView->load(QUrl(url));
     return app.exec();
 }
