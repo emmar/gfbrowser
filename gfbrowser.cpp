@@ -26,10 +26,11 @@ int main(int argc, char *argv[])
     //view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
-    view.setViewport(new QGLWidget);
     // Set full screen.
     view.showFullScreen();
+    view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
+    view.setViewport(new QGLWidget);
+
     QGraphicsWebView graphicsView;
 QGraphicsScene::fitInView();
     //graphicsView.resize(width, height);
