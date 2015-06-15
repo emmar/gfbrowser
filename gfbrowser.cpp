@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
  //QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
  //graphicsView.setResizesToContents(true);
 // graphicsView.fitInView();
-graphicsView.setSceneRect(view.boundingRect());
+scene.setSceneRect(view.boundingRect());
 
     scene.addItem(&graphicsView);
     //view.resize(width, height);
