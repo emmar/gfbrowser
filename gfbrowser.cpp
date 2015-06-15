@@ -6,7 +6,7 @@
 int main(int argc, char** argv) {
     QApplication app(argc, argv);
     QString url;
-    QWebView view;
+    QGraphicsWebView view;
     // Read first application argument as url.
     if (1 < app.arguments().count()) {url = app.arguments().at(1);}
     else {url = "http://localhost";}
