@@ -16,11 +16,11 @@ int main(int argc, char** argv) {
     // Hide the cursor (it still exists).
     QApplication::setOverrideCursor(Qt::BlankCursor);
     // Disable scrollbars.
-    webView.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
-    webView.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
+    //webView.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
+    //webView.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     // Set full screen.
     view.showFullScreen();
     // Open a url.
-    webView.setUrl(QUrl(url));
+    webView=>load(QUrl(url));
     return app.exec();
 }
