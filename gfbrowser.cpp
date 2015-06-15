@@ -7,13 +7,19 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    // Read first application argument as url.
+    if (1 < app.arguments().count()) {url = app.arguments().at(1);}
+    else {url = "http://localhost";}
+    // Hide the cursor (it still exists).
+    QApplication::setOverrideCursor(Qt::BlankCursor);
+
     const int width = 1900;
     const int height = 1000;
 
     QGraphicsScene scene;
 
     QGraphicsView view(&scene);
-    
+    // Disable scrollbars.
     view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -23,10 +29,12 @@ int main(int argc, char *argv[])
     QGraphicsWebView graphicsView;
 
     graphicsView.resize(width, height);
-    graphicsView.load(QUrl("http://codepen.io/paulirish/pen/LsxyF"));
+    graphicsView.load(QUrl(url));
 
     scene.addItem(&graphicsView);
-    view.resize(width, height);
+    // Set full screen.
+    view.showFullScreen();
+    //view.resize(width, height);
     view.show();
 
     return app.exec();
