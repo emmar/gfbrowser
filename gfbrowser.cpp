@@ -24,11 +24,14 @@ int main(int argc, char *argv[])
     // Load url.
     webView.load(QUrl(url));
     view.showFullScreen();
-    // Disable scrollbars.
+    // Disable scrollbars of view.
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // bugfix for QGraphicsWebView
     webView.resize(app.desktop()->screenGeometry().size());
+    // Disable scrollbars of webContent.
+    webView()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
+    webView.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
 
     //QGraphicsScene scene;
     //QGraphicsView view(&scene);
