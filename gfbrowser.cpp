@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
 // graphicsView.fitInView();
     scene.addItem(&graphicsView);
     //view.resize(width, height);
-    // Set full screen.
-    view.showFullScreen();
+graphicsView.showFullScreen();
+
     view.show();
 
     return app.exec();
