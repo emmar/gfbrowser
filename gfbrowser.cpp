@@ -6,6 +6,10 @@
 #include <QString>
 #include <QWebFrame>
 
+/*  Implementation that uses QGraphicsWebView to support hardware acceleration
+ *  on mobile devices.
+ */
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
