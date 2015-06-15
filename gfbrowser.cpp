@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
     view.setViewport(new QGLWidget);
 
     QGraphicsWebView graphicsView;
-    //graphicsView.resize(width, height);
-//graphicsView.setSceneRect(view.itemsBoundingRect());
+
     graphicsView.load(QUrl(url));
- QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
+ //QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
+ graphicsView.setResizesToContents(true);
     scene.addItem(&graphicsView);
     //view.resize(width, height);
     view.show();
