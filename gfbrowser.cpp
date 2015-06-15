@@ -13,14 +13,15 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
 
     QGraphicsView view(&scene);
-    //QGraphicsView view;
+    
     view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
+    view.setViewport(new QGLWidget);
 
     QGraphicsWebView graphicsView;
-view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
-view.setViewport(new QGLWidget);
+
     graphicsView.resize(width, height);
     graphicsView.load(QUrl("http://codepen.io/paulirish/pen/LsxyF"));
 
