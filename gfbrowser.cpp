@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
     // Hide the cursor (it still exists).
     //QApplication::setOverrideCursor(Qt::BlankCursor);
 
-    QGraphicsScene scene;
-    QGraphicsView view(&scene);
- 
+    //QGraphicsScene scene;
+    //QGraphicsView view(&scene);
+ QGraphicsView view;
     // Disable scrollbars.
     view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -33,9 +33,9 @@ int main(int argc, char *argv[])
  //QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
  //graphicsView.setResizesToContents(true);
 // graphicsView.fitInView();
-scene.setSceneRect(view.boundingRect());
+//scene.setSceneRect();
 
-    scene.addItem(&graphicsView);
+  //  scene.addItem(&graphicsView);
     //view.resize(width, height);
 
     view.show();
