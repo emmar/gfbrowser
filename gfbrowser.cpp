@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     //graphicsView.resize(width, height);
 //graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
-
+ QGraphicsView::fitInView();
     scene.addItem(&graphicsView);
     //view.resize(width, height);
     view.show();
