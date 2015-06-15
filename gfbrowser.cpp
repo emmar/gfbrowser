@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     QApplication app(argc, argv);
     QString url;
     QGraphicsScene scene;
-    QGraphicsView view(&scene);
+    //QGraphicsView view(&scene);
     QGraphicsWebView* webView  = new QGraphicsWebView();
     // Read first application argument as url.
     if (1 < app.arguments().count()) {url = app.arguments().at(1);}
@@ -26,6 +26,6 @@ int main(int argc, char** argv) {
       
       webView->setTransform(transform);
       webView->setPreferredSize(500,500);
-      view.showFullScreen();  
+      //view.showFullScreen();  
     return app.exec();
 }
