@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
 
     // Disable scrollbars.
 
-    view.setFrameShape(QFrame::NoFrame);
+    //view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     view.setViewport(new QGLWidget);
-    view.showFullScreen();
     // Set full screen.
+    view.showFullScreen();
     QGraphicsWebView graphicsView;
 
     //graphicsView.resize(width, height);
