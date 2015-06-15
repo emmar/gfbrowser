@@ -1,5 +1,6 @@
 #include <QApplication>
 #include <QGraphicsView>
+#include <QGraphicsWebView>
 #include <QString>
 
 int main(int argc, char *argv[])
