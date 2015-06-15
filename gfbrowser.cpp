@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
     view.setViewport(new QGLWidget);
 
     QGraphicsWebView graphicsView;
-QGraphicsScene::fitInView();
     //graphicsView.resize(width, height);
 //graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
