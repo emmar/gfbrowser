@@ -1,8 +1,8 @@
 #include <QApplication>
+#include <QGLWidget>
 #include <QGraphicsView>
 #include <QGraphicsWebView>
 #include <QString>
-//#include <QGLWidget>
 
 int main(int argc, char *argv[])
 {
@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
 //graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
 
-    scene.addItem(&graphicsView);
-
+    //scene.addItem(&graphicsView);
+    scene.addItem(new QGraphicsWebView::load(QUrl(url)));
     //view.resize(width, height);
     view.show();
 
