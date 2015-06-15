@@ -22,7 +22,7 @@ graphicsView->setViewport(new QGLWidget);
     graphicsView.resize(width, height);
     graphicsView.load(QUrl("http://codepen.io/paulirish/pen/LsxyF"));
 
-    scene.addItem(&graphicsView);
+    scene.addItem(graphicsView);
     view.resize(width, height);
     view.show();
 
