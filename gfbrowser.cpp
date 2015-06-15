@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
     QGraphicsWebView graphicsView;
 
     //graphicsView.resize(width, height);
+graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
 
     scene.addItem(&graphicsView);
