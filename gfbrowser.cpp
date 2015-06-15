@@ -4,7 +4,7 @@
 #include <QGraphicsWebView>
 #include <QDesktopWidget>
 #include <QString>
-#include <QwebFrame>
+#include <QWebFrame>
 
 int main(int argc, char *argv[])
 {
