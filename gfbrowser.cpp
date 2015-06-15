@@ -1,5 +1,5 @@
 #include <QApplication>
-#include <QWebView>
+#include <QGraphicsWebView>
 #include <QWebFrame>
 #include <QString>
 
