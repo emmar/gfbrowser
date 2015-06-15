@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
 
     QGraphicsScene scene;
 
-    //QGraphicsView view(&scene);
-    QGraphicsView view;
+    QGraphicsView view(&scene);
+    //QGraphicsView view;
     view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
