@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     //graphicsView.load(QUrl(url));
 
     //scene.addItem(&graphicsView);
-    scene.addItem(QGraphicsWebView::load(QUrl(url)));
+    scene.addItem(graphicsView.load(QUrl(url)));
     //view.resize(width, height);
     view.show();
 
