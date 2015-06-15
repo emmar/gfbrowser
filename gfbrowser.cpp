@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
 
     QGraphicsView view(&scene);
-
+ QGraphicsView::fitInView;
     // Disable scrollbars.
 
     //view.setFrameShape(QFrame::NoFrame);
