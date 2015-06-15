@@ -14,20 +14,16 @@ int main(int argc, char *argv[])
     // Hide the cursor (it still exists).
     //QApplication::setOverrideCursor(Qt::BlankCursor);
 
-    //const int width = 1900;
-    //const int height = 1000;
-
     QGraphicsScene scene;
-
     QGraphicsView view(&scene);
  
     // Disable scrollbars.
-
-    //view.setFrameShape(QFrame::NoFrame);
+    view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // Set full screen.
     view.showFullScreen();
+    // reccommended - http://blog.qt.io/blog/2010/05/17/qtwebkit-now-accelerates-css-animations-3d-transforms/
     view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     view.setViewport(new QGLWidget);
 
