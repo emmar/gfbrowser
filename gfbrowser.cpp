@@ -14,6 +14,18 @@ int main(int argc, char *argv[])
     // Hide the cursor (it still exists).
     //QApplication::setOverrideCursor(Qt::BlankCursor);
 
+QGraphicsScene scene;
+QGraphicsView view(&scene);
+QGraphicsWebView webView;
+scene.addItem(&webView);
+webView.load(QUrl("http://www.google.com"));
+view.showFullScreen();
+view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+webView.resize(app.desktop()->screenGeometry().size());	
+
+
+
     //QGraphicsScene scene;
     //QGraphicsView view(&scene);
 /* QGraphicsView view;
@@ -28,9 +40,9 @@ int main(int argc, char *argv[])
     view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     view.setViewport(new QGLWidget);
 */
-    QGraphicsWebView webContent;
+    //QGraphicsWebView webContent;
 
-    webContent.load(QUrl(url));
+    //webContent.load(QUrl(url));
  //QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
  //graphicsView.setResizesToContents(true);
 // graphicsView.fitInView();
@@ -40,7 +52,7 @@ int main(int argc, char *argv[])
     //view.resize(width, height);
 
     //view.show();
-    webContent.showFullScreen();
+    //webContent.showFullScreen();
 
     return app.exec();
 }
