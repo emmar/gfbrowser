@@ -2,7 +2,7 @@
 #include <QGraphicsView>
 #include <QGraphicsWebView>
 #include <QString>
-#include <QGLWidget>
+//#include <QGLWidget>
 
 int main(int argc, char *argv[])
 {
