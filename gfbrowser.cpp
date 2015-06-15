@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     const int width = 1900;
     const int height = 1000;
 
-    //QGraphicsScene scene;
+    QGraphicsScene scene;
 
     //QGraphicsView view(&scene);
     QGraphicsView view;
