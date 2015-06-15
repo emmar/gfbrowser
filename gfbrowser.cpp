@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QGraphicsWebView>
 #include <QString>
 
 int main(int argc, char** argv) {
@@ -17,7 +18,8 @@ int main(int argc, char** argv) {
     // Disable scrollbars.
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
-    
+    // Set full screen.
+    view.showFullScreen();
     // Open a url.
     view.setUrl(QUrl(url));
     return app.exec();
