@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
     //QGraphicsScene scene;
     //QGraphicsView view(&scene);
- QGraphicsView view;
+/* QGraphicsView view;
 
     // Disable scrollbars.
     view.setFrameShape(QFrame::NoFrame);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     // reccommended - http://blog.qt.io/blog/2010/05/17/qtwebkit-now-accelerates-css-animations-3d-transforms/
     view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     view.setViewport(new QGLWidget);
-
+*/
     QGraphicsWebView webContent;
 
     webContent.load(QUrl(url));
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
   //  scene.addItem(&graphicsView);
     //view.resize(width, height);
 
-    view.show();
+    //view.show();
 
     return app.exec();
 }
