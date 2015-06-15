@@ -11,7 +11,7 @@
  *       compositing and tiling."
  *
  *  This browser might be reincarnated if hardware acceleration is not needed
- *  or gets implemented later.
+ *  or gets implemented into QWebView.
  */
 
 int main(int argc, char** argv) {
