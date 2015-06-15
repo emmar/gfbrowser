@@ -1,12 +1,11 @@
 #include <QApplication>
-#include <QGraphicsWebView>
-#include <QWebFrame>
+#include <QGraphicsView>
 #include <QString>
 
 int main(int argc, char** argv) {
     QApplication app(argc, argv);
     QString url;
-    QGraphicsWebView view;
+    QGraphicsView view;
     // Read first application argument as url.
     if (1 < app.arguments().count()) {url = app.arguments().at(1);}
     else {url = "http://localhost";}
@@ -16,7 +15,7 @@ int main(int argc, char** argv) {
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
     view.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     // Set full screen.
-    //view.showFullScreen();
+    view.showFullScreen();
     // Open a url.
     view.setUrl(QUrl(url));
     return app.exec();
