@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 
     //QGraphicsScene scene;
     //QGraphicsView view(&scene);
- //QGraphicsView view;
-QGraphicsWebView view;
+ QGraphicsView view;
+
     // Disable scrollbars.
     view.setFrameShape(QFrame::NoFrame);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -28,9 +28,9 @@ QGraphicsWebView view;
     view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     view.setViewport(new QGLWidget);
 
-    //QGraphicsWebView graphicsView;
+    QGraphicsWebView webContent;
 
-    graphicsView.load(QUrl(url));
+    webContent.load(QUrl(url));
  //QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
  //graphicsView.setResizesToContents(true);
 // graphicsView.fitInView();
