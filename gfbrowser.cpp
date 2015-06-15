@@ -4,6 +4,7 @@
 #include <QGraphicsWebView>
 #include <QDesktopWidget>
 #include <QString>
+#include <QwebFrame>
 
 int main(int argc, char *argv[])
 {
@@ -29,9 +30,10 @@ int main(int argc, char *argv[])
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // bugfix for QGraphicsWebView
     webView.resize(app.desktop()->screenGeometry().size());
-    // Disable scrollbars of webContent.
-    webView.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
-    webView.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
+    // Disable scrollbars of webView.
+    QWebFrame* frame = webView->page()->mainFrame();
+    frame->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
+    frame->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
 
     //QGraphicsScene scene;
     //QGraphicsView view(&scene);
