@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
     // Hide the cursor (it still exists).
     //QApplication::setOverrideCursor(Qt::BlankCursor);
 
-    const int width = 1900;
-    const int height = 1000;
+    //const int width = 1900;
+    //const int height = 1000;
 
     QGraphicsScene scene;
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // Set full screen.
     view.showFullScreen();
     QGraphicsWebView graphicsView;
-QGraphicsWebView::fitInView();
+QGraphicsScene::fitInView();
     //graphicsView.resize(width, height);
 //graphicsView.setSceneRect(view.itemsBoundingRect());
     graphicsView.load(QUrl(url));
