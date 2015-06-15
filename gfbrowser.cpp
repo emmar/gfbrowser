@@ -31,9 +31,12 @@ int main(int argc, char *argv[])
 
     graphicsView.load(QUrl(url));
  //QGraphicsView::fitInView(view.itemsBoundingRect(), Qt::KeepAspectRatio;
- graphicsView.setResizesToContents(true);
+ //graphicsView.setResizesToContents(true);
+ graphicsView.fitInView();
     scene.addItem(&graphicsView);
     //view.resize(width, height);
+    // Set full screen.
+    view.showFullScreen();
     view.show();
 
     return app.exec();
