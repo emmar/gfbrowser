@@ -21,6 +21,11 @@ int main(int argc, char** argv) {
     //webView.page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
     //webView.page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     // Set full screen.
-    view.showFullScreen();
+      QTransform transform;
+      transform.rotate(60,Qt::YAxis);
+      
+      webView->setTransform(transform);
+      webView->setPreferredSize(500,500);
+      view.showFullScreen();  
     return app.exec();
 }
