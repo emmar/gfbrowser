@@ -4,6 +4,9 @@
 #include <QDesktopWidget>
 #include <QString>
 #include <QWebFrame>
+#ifdef DEV_INTERFACE_REQUIRES_MULTI_WINDOW
+    #include <QWebInspector>
+#endif
 
 /*  Implementation that uses QGraphicsWebView to support hardware acceleration
  *  on mobile devices.
@@ -22,6 +25,18 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
     QGraphicsView view(&scene);
     QGraphicsWebView webView;
+    // Set accelerated composting for gpu acceleration. (QtWebKitWebGL - default true)
+    webView.page()->settings()->setAttribute(QWebSettings::AcceleratedCompositingEnabled, true);
+    #ifdef DEV_INTERFACE_REQUIRES_MULTI_WINDOW
+        // Show the developer interface.
+        webView.page()->settings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
+        QWebInspector inspector;
+        inspector.setPage(webView.page());
+        inspector.setVisible(true);
+        // Restore the mouse cursor.
+        QApplication::restoreOverrideCursor();
+    #endif
+    // Add the webView to scene.
     scene.addItem(&webView);
     // Reccommended - http://blog.qt.io/blog/2010/05/17/qtwebkit-now-accelerates-css-animations-3d-transforms
     //view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
