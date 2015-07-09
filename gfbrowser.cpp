@@ -7,7 +7,9 @@
 #ifdef DEV_INTERFACE_REQUIRES_MULTI_WINDOW
     #include <QWebInspector>
 #endif
-#include <QGLWidget>
+#ifdef QT_OPEN_GLWIDGETS
+    #include <QOpenGLWidget>
+#endif
 
 /*  Implementation that uses QGraphicsWebView to support hardware acceleration
  *  on mobile devices.
@@ -72,8 +74,10 @@ int main(int argc, char *argv[])
     // Add the webView to scene.
     scene.addItem(&webView);
     // Configure view properties.
-    view.setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    view.setViewport(new QGLWidget(QGL::DirectRendering | QGL::DoubleBuffer));
+    #ifdef QT_OPEN_GLWIDGETS
+        view.setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
+        view.setViewport(new QOpenGLWidget(QGL::DirectRendering | QGL::DoubleBuffer));
+    #endif
     view.setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     view.setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     view.setWindowFlags(Qt::FramelessWindowHint);
