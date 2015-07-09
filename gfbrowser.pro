@@ -4,7 +4,7 @@ message ('Qt version: ' $$[QT_VERSION])
     QT += webkitwidgets
     # Testing the QTOpenGLWidget: trying to fix EGLFS: OpenGL windows cannot...
         DEFINES += QT_OPEN_GLWIDGETS
-        QT += widgets
+        QT += widgets opengl
   }
   contains(QT_MAJOR_VERSION, 4) {QT += webkit}
 message ('Build paths: ' $${QT})
