@@ -10,6 +10,9 @@
 #ifdef QT_OPEN_GLWIDGETS
     #include <QOpenGLWidget>
 #endif
+#ifdef QT_BLOG_RECOMMENDS
+    #include <QGLWidget>
+#endif
 
 /*  Implementation that uses QGraphicsWebView to support hardware acceleration
  *  on mobile devices.
@@ -76,7 +79,7 @@ int main(int argc, char *argv[])
     // Configure view properties.
     #ifdef QT_OPEN_GLWIDGETS
         view.setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-        view.setViewport(new QOpenGLWidget(QGL::DirectRendering | QGL::DoubleBuffer));
+        view.setViewport(new QOpenGLWidget());
     #endif
     view.setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     view.setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
