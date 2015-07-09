@@ -5,5 +5,7 @@ message ('Qt version: ' $$[QT_VERSION])
 message ('Build paths: ' $${QT})
 # If using a window manager, a developer interface is available.
 #DEFINES += DEV_INTERFACE_REQUIRES_MULTI_WINDOW
+# QGLWidget requires opengl
+QT += opengl
 TARGET      = gfbrowser
 SOURCES = gfbrowser.cpp
