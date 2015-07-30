@@ -12,7 +12,7 @@ Notes:
     sudo apt-get install -y build-essential mesa-common-dev libglu1-mesa-dev libsqlite3-dev;
     : 'Clone a copy of this repository.';
     git clone https://github.com/emmar/gfbrowser; cd gfbrowser;
-    : 'Optionally turn on the DEV_INTERFACE_REQUIRES_MULTI_WINDOW opt flag.'
+    : 'Optionally turn on the DEV_REMOTE_INSPECTOR opt flag.'
     sed 's/^#\(DEFINES\)/\1/' gfbrowser.pro; : 'uncomment all DEFINES tags...'
     : 'Compile and run the browser.';
     qmake; make; ./gfbrowser http://www.google.com;
