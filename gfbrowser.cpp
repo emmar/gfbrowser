@@ -70,6 +70,10 @@ int main(int argc, char *argv[])
         // Show the developer interface.
         webView.page()->setProperty("_q_webInspectorServerPort",9999);
     #endif
+    // Alternative for remote inspector is to pass a second parameter. Anything is ok.
+    if (2 < app.arguments().count()) {
+        webView.page()->setProperty("_q_webInspectorServerPort",9999);
+    }
     // Add the webView to scene.
     scene.addItem(&webView);
     // Configure view properties.
