@@ -23,20 +23,24 @@ int main(int argc, char *argv[])
      *  enabled by default.
      */
     QWebSettings::globalSettings()->setAttribute(QWebSettings::AutoLoadImages, true);
+    
     /*  Enables or disables the running of JavaScript programs. This is enabled by
      *  default.
      */
     QWebSettings::globalSettings()->setAttribute(QWebSettings::JavascriptEnabled, true);
+    
     /*  Private browsing prevents WebKit from recording visited pages in the
      *  history and storing web page icons. This is disabled by default.
      */
     QWebSettings::globalSettings()->setAttribute(QWebSettings::PrivateBrowsingEnabled, true);
+    
     /*  This feature, when used in conjunction with QGraphicsWebView, accelerates
      *  animations of web content. CSS animations of the transform and opacity
      *  properties will be rendered by composing the cached content of the animated
      *  elements. This is enabled by default.
      */
     QWebSettings::globalSettings()->setAttribute(QWebSettings::AcceleratedCompositingEnabled, true);
+    
     /*  This setting enables the tiled backing store feature for a
      *  QGraphicsWebView. With the tiled backing store enabled, the web page
      *  contents in and around the current visible area is speculatively cached
