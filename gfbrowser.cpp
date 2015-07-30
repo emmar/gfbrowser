@@ -4,9 +4,6 @@
 #include <QDesktopWidget>
 #include <QString>
 #include <QWebFrame>
-#ifdef DEV_INTERFACE_REQUIRES_MULTI_WINDOW
-    #include <QWebInspector>
-#endif
 #ifdef QT_OPEN_GLWIDGETS
     #include <QOpenGLWidget>
 #endif
@@ -65,14 +62,9 @@ int main(int argc, char *argv[])
     QGraphicsWebView webView;
     // Set accelerated composting for gpu acceleration. (QtWebKitWebGL - default true)
     webView.page()->settings()->setAttribute(QWebSettings::AcceleratedCompositingEnabled, true);
-    #ifdef DEV_INTERFACE_REQUIRES_MULTI_WINDOW
+    #ifdef DEV_REMOTE_INSPECTOR
         // Show the developer interface.
-        webView.page()->settings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
-        QWebInspector inspector;
-        inspector.setPage(webView.page());
-        inspector.setVisible(true);
-        // Restore the mouse cursor.
-        QApplication::restoreOverrideCursor();
+        webView.page()->setProperty("_q_webInspectorServerPort",9999);
     #endif
     // Add the webView to scene.
     scene.addItem(&webView);
